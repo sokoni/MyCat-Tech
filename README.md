@@ -1,73 +1,82 @@
-# React + TypeScript + Vite
+# 🐾 GatoTech Portfolio
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A stunning, cat-themed tech portfolio website featuring modern web design techniques including glassmorphism, neon gradients, and smooth animations.
 
-Currently, two official plugins are available:
+## ✨ Features
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+- **Modern Design System**: Glassmorphism effects, neon color palette, and premium typography
+- **Three Dynamic Pages**:
+  - **Home**: Hero section with animated cat mascot and floating stat cards
+  - **Portfolio**: Interactive project showcase with hover effects
+  - **GatoShop**: E-commerce interface for cat tech gadgets with cart functionality
+- **Responsive Navigation**: Smooth client-side routing with React Router
+- **Interactive Elements**: Hover animations, floating effects, and dynamic cart
 
-## React Compiler
+## 🛠️ Tech Stack
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+- **Framework**: React 18 + TypeScript
+- **Build Tool**: Vite
+- **Styling**: Vanilla CSS with CSS Variables
+- **Routing**: React Router DOM
+- **Fonts**: Google Fonts (Outfit)
 
-## Expanding the ESLint configuration
+## 🚀 Getting Started
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+### Prerequisites
+- Node.js (v16 or higher)
+- npm or yarn
 
-```js
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
+### Installation
 
-      // Remove tseslint.configs.recommended and replace with this
-      tseslint.configs.recommendedTypeChecked,
-      // Alternatively, use this for stricter rules
-      tseslint.configs.strictTypeChecked,
-      // Optionally, add this for stylistic rules
-      tseslint.configs.stylisticTypeChecked,
-
-      // Other configs...
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
+1. Clone the repository:
+```bash
+git clone <your-repo-url>
+cd web-project
 ```
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
-
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
-
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-      // Enable lint rules for React
-      reactX.configs['recommended-typescript'],
-      // Enable lint rules for React DOM
-      reactDom.configs.recommended,
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
+2. Install dependencies:
+```bash
+npm install
 ```
+
+3. Start the development server:
+```bash
+npm run dev
+```
+
+The site will be available at `http://localhost:8080`
+
+### Build for Production
+
+```bash
+npm run build
+```
+
+The production-ready files will be in the `dist` directory.
+
+## 📁 Project Structure
+
+```
+src/
+├── components/       # Reusable components (Navbar)
+├── pages/           # Page components (Home, Portfolio, Store)
+├── styles/          # Global styles and CSS variables
+├── images/          # Image assets
+└── App.tsx          # Main application with routing
+```
+
+## 🎨 Design Philosophy
+
+This portfolio showcases cutting-edge web design with:
+- **Neon Kitty** color palette (Purples, Cyans, Pinks)
+- Dark mode base for premium feel
+- Glassmorphism for depth and sophistication
+- Micro-animations for enhanced UX
+
+## 📝 License
+
+MIT License - feel free to use this as a template for your own portfolio!
+
+---
+
+**Built with 💜 by Sokoni Babb**
