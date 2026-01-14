@@ -1,5 +1,8 @@
 import React, { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
+import { useAuthenticator } from '@aws-amplify/ui-react';
+import { useCart } from '../context/CartContext';
+import { ShoppingCart, LogIn, User } from 'lucide-react';
 import './Navbar.css';
 
 const Navbar: React.FC = () => {
@@ -12,6 +15,9 @@ const Navbar: React.FC = () => {
     window.addEventListener('scroll', handleScroll);
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
+
+  const { totalCount } = useCart();
+  const { authStatus, signOut, user } = useAuthenticator(context => [context.authStatus, context.user]);
 
   return (
     <nav className={`navbar ${scrolled ? 'navbar-scrolled' : ''}`}>
@@ -26,7 +32,21 @@ const Navbar: React.FC = () => {
           <li><Link to="/store" className="nav-item">GatoShop</Link></li>
         </ul>
         <div className="navbar-actions">
-          <button className="btn btn-primary">Let's Meow</button>
+          <Link to="/cart" className="nav-cart glass">
+            <ShoppingCart size={20} />
+            {totalCount > 0 && <span className="cart-badge">{totalCount}</span>}
+          </Link>
+          
+          {authStatus === 'authenticated' ? (
+            <div className="user-menu">
+              <span className="user-name"><User size={18} /> {user?.username}</span>
+              <button onClick={signOut} className="btn btn-outline btn-sm">Sign Out</button>
+            </div>
+          ) : (
+            <Link to="/login" className="btn btn-primary btn-sm login-btn">
+              <LogIn size={18} /> Login
+            </Link>
+          )}
         </div>
       </div>
     </nav>

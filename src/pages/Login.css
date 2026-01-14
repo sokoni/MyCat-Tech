@@ -1,0 +1,60 @@
+.login-page {
+    min-height: calc(100vh - 80px);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 2rem;
+    background: radial-gradient(circle at center, rgba(0, 243, 255, 0.05) 0%, transparent 70%);
+}
+
+.login-container {
+    width: 100%;
+    max-width: 500px;
+    padding: 2rem;
+    border-radius: 20px;
+}
+
+/* Amplify UI Overrides */
+[data-amplify-authenticator] {
+    --amplify-colors-background-primary: transparent;
+    --amplify-colors-brand-primary-80: var(--neon-cyan);
+    --amplify-colors-brand-primary-90: var(--neon-cyan);
+    --amplify-colors-brand-primary-100: var(--neon-magenta);
+    --amplify-colors-font-primary: var(--text-main);
+    --amplify-colors-font-secondary: var(--text-muted);
+    --amplify-components-button-primary-background-color: var(--neon-cyan);
+    --amplify-components-button-primary-hover-background-color: var(--neon-magenta);
+    --amplify-components-fieldcontrol-focus-box-shadow: 0 0 0 2px var(--neon-cyan);
+    --amplify-components-tabs-item-active-border-color: var(--neon-cyan);
+    --amplify-components-tabs-item-active-color: var(--neon-cyan);
+}
+
+.amplify-tabs {
+    border-color: var(--glass-border) !important;
+}
+
+.amplify-heading {
+    color: var(--text-main) !important;
+}
+
+.amplify-label {
+    color: var(--text-muted) !important;
+}
+
+.amplify-input {
+    background-color: rgba(255, 255, 255, 0.05) !important;
+    border: 1px solid var(--glass-border) !important;
+    color: white !important;
+}
+
+.auth-success {
+    text-align: center;
+    padding: 2rem;
+}
+
+.auth-actions {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    margin-top: 2rem;
+}
