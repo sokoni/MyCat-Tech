@@ -1,0 +1,20 @@
+{
+  "dev": {
+    "awscloudformation": {
+      "AuthRoleName": "amplify-catweb-dev-a2ba0-authRole",
+      "UnauthRoleArn": "arn:aws:iam::195553832113:role/amplify-catweb-dev-a2ba0-unauthRole",
+      "AuthRoleArn": "arn:aws:iam::195553832113:role/amplify-catweb-dev-a2ba0-authRole",
+      "Region": "us-east-2",
+      "DeploymentBucketName": "amplify-catweb-dev-a2ba0-deployment",
+      "UnauthRoleName": "amplify-catweb-dev-a2ba0-unauthRole",
+      "StackName": "amplify-catweb-dev-a2ba0",
+      "StackId": "arn:aws:cloudformation:us-east-2:195553832113:stack/amplify-catweb-dev-a2ba0/bcee7b10-f270-11f0-9a7e-0a84abf49c81",
+      "AmplifyAppId": "ddwy5p6u41iu7"
+    },
+    "categories": {
+      "auth": {
+        "catweb5eda9e95": {}
+      }
+    }
+  }
+}

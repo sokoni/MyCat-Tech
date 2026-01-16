@@ -106,12 +106,20 @@
     gap: 1rem;
 }
 
-.user-name {
-    font-size: 0.9rem;
-    color: var(--text-muted);
+.user-profile-link {
+    padding: 0.5rem;
+    border-radius: 50%;
     display: flex;
     align-items: center;
-    gap: 0.4rem;
+    justify-content: center;
+    transition: var(--transition-smooth);
+    color: var(--neon-cyan);
+}
+
+.user-profile-link:hover {
+    background: rgba(139, 92, 246, 0.2);
+    transform: translateY(-2px);
+    box-shadow: 0 4px 15px rgba(139, 92, 246, 0.3);
 }
 
 .login-btn {

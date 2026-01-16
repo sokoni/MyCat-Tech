@@ -39,7 +39,9 @@ const Navbar: React.FC = () => {
           
           {authStatus === 'authenticated' ? (
             <div className="user-menu">
-              <span className="user-name"><User size={18} /> {user?.username}</span>
+              <Link to="/profile" className="user-profile-link glass">
+                <User size={18} />
+              </Link>
               <button onClick={signOut} className="btn btn-outline btn-sm">Sign Out</button>
             </div>
           ) : (

@@ -6,6 +6,7 @@ import Home from './pages/Home'
 import Portfolio from './pages/Portfolio'
 import Store from './pages/Store'
 import Login from './pages/Login'
+import Profile from './pages/Profile'
 import Cart from './pages/Cart'
 import CheckoutSuccess from './pages/CheckoutSuccess'
 
@@ -21,6 +22,7 @@ function App() {
               <Route path="/portfolio" element={<Portfolio />} />
               <Route path="/store" element={<Store />} />
               <Route path="/login" element={<Login />} />
+              <Route path="/profile" element={<Profile />} />
               <Route path="/cart" element={<Cart />} />
               <Route path="/checkout-success" element={<CheckoutSuccess />} />
             </Routes>
