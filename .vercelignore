@@ -1,5 +1,7 @@
 # Amplify backend files - not needed for frontend deployment
-amplify/
-aws-exports.js
+# Only exclude the backend directory, keep aws-exports.js for the app
+amplify/backend/
+amplify/cli.json
+amplify/team-provider-info.json
 awsconfiguration.json
 amplifyconfiguration.json
