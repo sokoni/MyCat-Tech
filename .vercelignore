@@ -1,0 +1,5 @@
+# Amplify backend files - not needed for frontend deployment
+amplify/
+aws-exports.js
+awsconfiguration.json
+amplifyconfiguration.json
