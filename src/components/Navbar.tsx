@@ -43,6 +43,21 @@ const Navbar: React.FC = () => {
               <li className="mobile-only"><Link to="/profile" className="nav-item" onClick={() => setMobileMenuOpen(false)}>Profile</Link></li>
             )}
           </ul>
+          
+          <div className="mobile-only mobile-auth">
+            {authStatus === 'authenticated' ? (
+              <>
+                <Link to="/profile" className="user-profile-link glass" onClick={() => setMobileMenuOpen(false)}>
+                  <User size={18} /> Profile
+                </Link>
+                <button onClick={signOut} className="btn btn-outline btn-sm">Sign Out</button>
+              </>
+            ) : (
+              <Link to="/login" className="btn btn-primary btn-sm login-btn" onClick={() => setMobileMenuOpen(false)}>
+                <LogIn size={18} /> Login
+              </Link>
+            )}
+          </div>
         </div>
 
         <div className="navbar-actions">
