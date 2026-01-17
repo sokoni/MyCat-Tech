@@ -166,6 +166,25 @@
 /* Responsive */
 @media (max-width: 600px) {
     .login-container {
-        padding: 1rem;
+        padding: 1.5rem 1rem;
+        /* Adjust padding for small screens */
+        margin: 0 1rem;
+        /* Ensure margin from edges */
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        /* Center content horizontally */
+    }
+
+    /* Force centering of all internal text */
+    [data-amplify-authenticator],
+    .amplify-heading,
+    .amplify-text {
+        text-align: center !important;
+    }
+
+    /* Ensure full width for inputs on mobile */
+    .amplify-field-group {
+        width: 100%;
     }
 }
