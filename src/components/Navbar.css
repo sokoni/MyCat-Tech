@@ -218,7 +218,7 @@
     }
 }
 
-/* Mobile Menu Container Styles (outside media query for base state) */
+/* Mobile Menu Container Styles */
 .nav-links-container {
     position: fixed;
     top: 0;
@@ -230,7 +230,6 @@
     backdrop-filter: blur(20px);
     display: flex;
     flex-direction: column;
-    /* Changed to column for vertical stacking */
     align-items: center;
     justify-content: center;
     transition: right 0.4s ease-in-out;
@@ -239,4 +238,10 @@
 
 .nav-links-container.active {
     right: 0;
+}
+}
+
+/* Desktop Styles for Nav Container (Default) */
+.nav-links-container {
+    display: block;
 }
